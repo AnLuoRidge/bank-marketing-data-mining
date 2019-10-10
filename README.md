@@ -3,6 +3,8 @@ Prediction of the subscription rate of a bank marketing data set.
 
 The data set is from [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/datasets/bank+marketing).
 
+The following is part of the report. Please check the full PDF version in this repo.
+
 # Introduction
 This project aims to predict the subscription of the deposit based on provided data set. The data set is from direct marketing campaigns of a Portuguese banking institution.
 There are 21 attributes provided which can be divided into the bank client information, campaign data, and social and economic index.
