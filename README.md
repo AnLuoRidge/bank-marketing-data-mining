@@ -31,7 +31,7 @@ The detail of the attributes is list below.
 | euribor3m | Euribor 3-month rate (daily indicator) | Ratio |
 | nr.employed | Number of employees (quarterly indicator) | Ratio |
 | Final\_Y | The subscription of the deposit | Norminal |
-Figure 1 Attribute description
+
 The report records the process of the try and error, and finally provides the best approach to the prediction problem. Sklearn is the main framework used in this project.
 # Data cleaning and preprocessing
 ## Data cleaning
@@ -66,25 +66,25 @@ When the best classifier is chosen, more actions could be performed to improve t
 5) combine different classifiers.
 # Classification
 ## Ranking of feature importance
-Figure 2 Ranking of feature importance
+Figure 1 Ranking of feature importance
 ## Classifier selection
 ### K-nearest neighbour (assigned)
 K-nearest neighbour (KNN) is a supervised classifier, and there is only one parameter to tune which is k. KNN does not support the feature selection in sklearn, so this step skipped. The parameter k is tested from 1 – 100, and 1 get the best F score.
-Figure 3 F score with different k
+Figure 2 F score with different k
 Following is the confusion matrix when k is 1.
-Figure 4 Confusion matrix of KNN
+Figure 3 Confusion matrix of KNN
 The F score is 0.458.
 ### Decision tree
 Feature selection is performed first. According to the graph, nine features is the best option.
-Figure 5 Different feature numbers in decision tree
+Figure 4 Different feature numbers in decision tree
 The nine features are &#39;age&#39;, &#39;duration&#39;, &#39;cons.conf.idx&#39;, &#39;euribor3m&#39;, &#39;marital\_single&#39;, &#39;education\_university.degree&#39;, &#39;housing\_no&#39;, and &#39;poutcome\_success&#39;.
-Figure 6 Confusion matrix of decision tree
+Figure 5 Confusion matrix of decision tree
 The F score is 0.626.
 ### Random forest
 The final F score of random forest is 0.630. The confusion matrix is showed below.
-Figure 7 Confusion matrix of random forest
+Figure 6 Confusion matrix of random forest
 ### Gradient Boosting
-Figure 8 Confusion matrix of gradient boosting
+Figure 7 Confusion matrix of gradient boosting
 The F score is 0.636.
 ### Comparison
 | **Classifier** | **F score** |
@@ -93,7 +93,7 @@ The F score is 0.636.
 | Decision tree | 0.626 |
 | Random forest | 0.630 |
 | KNN | 0.458 |
-Figure 9 Comparison of F score
+Table Comparison of F score
 ## Best classifier – Gradient Boosting
 The features selected are:
 - age
